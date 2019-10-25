@@ -11,6 +11,7 @@ pipeline {
                 }
             }
             steps {
+                sh 'whoami'
                 sh 'python -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
@@ -21,6 +22,7 @@ pipeline {
                 }
             }
             steps {
+                sh 'whoami'
                 sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
             }
             post {
@@ -36,6 +38,7 @@ pipeline {
                 }
             }
             steps {
+                sh 'whoami'
                 sh 'pyinstaller --onefile sources/add2vals.py' 
             }
             post {
