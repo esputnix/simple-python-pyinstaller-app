@@ -63,4 +63,6 @@ _=/bin/printenv
 OLDPWD=/
 ```
 
+Remote trigger
+
 
